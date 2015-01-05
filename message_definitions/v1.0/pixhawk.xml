@@ -201,6 +201,13 @@
                <field type="float" name="pitch">x pitch in rad</field>
                <field type="float" name="roll">y roll in rad</field>
           </message>
+          <message id="199" name="D3_CONTROL">
+	           <description>Message to control the Position, Start and Landing behaviour from external</description>
+               <field type="uint8_t" name="state">0: Position Control, 1: Landing, 2: Starting, 3: Follow Target </field>
+               <field type="float" name="x">local x position setpoint in meter and NED</field>
+               <field type="float" name="y">local y position setpoint in meter and NED</field>
+               <field type="float" name="z">local z position setpoint in meter and NED below ground (positive = down)</field>
+          </message>
           <message id="200" name="ATTITUDE_CONTROL">
                <field type="uint8_t" name="target">The system to be controlled</field>
                <field type="float" name="roll">roll</field>

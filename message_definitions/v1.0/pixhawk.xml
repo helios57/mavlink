@@ -182,6 +182,25 @@
                <field type="uint8_t[32]" name="descriptor">Descriptor</field>
                <field type="float" name="response">Harris operator response at this location</field>
           </message>
+          <message id="196" name="D3_TARGET">
+	           <description>The difference in rad to the position over the target</description>
+               <field type="uint64_t" name="timestamp">Timestamp (local hw-time offboard)</field>
+               <field type="float" name="x">x diff to target in rad 0 = over the target</field>
+               <field type="float" name="y">y diff to target in rad 0 = over the target</field>
+          </message>
+          <message id="197" name="D3_FLOW">
+	           <description>The flow measured between the 2 last captured pictures</description>
+               <field type="uint64_t" name="timestamp_from">Timestamp frame (local hw-time offboard)</field>
+               <field type="uint64_t" name="timestamp_to">Timestamp next frame (local hw-time offboard)</field>
+               <field type="float" name="x">x flow in rad</field>
+               <field type="float" name="y">y flow in rad</field>
+          </message>
+          <message id="198" name="D3_PitchRoll">
+	           <description>Latest pitch and roll to correct the shaking on offboard cameras</description>
+               <field type="uint64_t" name="timestamp">Timestamp frame (pixhawk timestamp)</field>
+               <field type="float" name="pitch">x pitch in rad</field>
+               <field type="float" name="roll">y roll in rad</field>
+          </message>
           <message id="200" name="ATTITUDE_CONTROL">
                <field type="uint8_t" name="target">The system to be controlled</field>
                <field type="float" name="roll">roll</field>
